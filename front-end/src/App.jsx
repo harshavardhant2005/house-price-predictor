@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import "./style.css"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  return <section className='bg-[#FAF3E0] h-[100vh] w-full '>
+        {/* heading section  */}
+        <header className='flex h-[10%] w-full justify-center items-center '>
+            <h1 className='text-4xl font-bold text-[#2E7D32] font-poppins'>
+                House price Predictor
+            </h1>
+        </header>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+        {/* input fields */}
+        <article className='flex h-[calc(100%-10%)] bg-red-400 '>
+            <form action="">
+                <label htmlFor="Number of bedroom">Number of bedroom</label>
+                <input type="text" className='border-solid border-2 rounded-md' required/>
+            </form>
+        </article>
+  </section>
 }
 
 export default App
